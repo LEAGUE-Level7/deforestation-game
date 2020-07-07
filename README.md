@@ -1,1 +1,1 @@
-# Deforestation Game
+# 	**Welcome to the Deforestation Game*
