@@ -4,3 +4,7 @@ Welcome to our **tree** game. ~~Please dont have a merge conflict~~
 console.log("Hello World");
 ```
 console.log("Hello");
+
+<script>
+console.log("Hi");
+</script>
