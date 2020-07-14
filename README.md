@@ -1,5 +1,6 @@
-# Deforestation Game - Let's have a merge conflict! :D
-Welcome to our **tree** game. ~~Please dont have a merge conflict~~
+# 	*Welcome to the Deforestation Game*
+##Discover the importance of regulating the manufacturing of paper through a fun choose your story game
+Welcome to our **tree** game. 
 ```javascript
 console.log("Hello World");
 ```
