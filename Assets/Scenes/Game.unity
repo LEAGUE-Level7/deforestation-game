@@ -1065,7 +1065,7 @@ RectTransform:
   - {fileID: 944745213}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.391}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1084,7 +1084,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 944745212}
-  buttonAmount: 4
+  questionText: {fileID: 581779089}
+  question: Why?
+  buttons:
+  - abc 1
+  - 2324
+  - 54332xsds
+  - dfsfd
   spacing: 55
 --- !u!1 &2060516172
 GameObject:
