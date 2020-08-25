@@ -16,7 +16,7 @@ public class ResourceLogic : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         paperSupply = 50;
         citizenHappiness = 50;
@@ -34,26 +34,26 @@ public class ResourceLogic : MonoBehaviour
 
 
 
+    //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
 
-
-    public void modifyPaperSupply(int amount, Boolean isIncrease, Boolean isDecrease)
+    public void modifyPaperSupply(int amount)
     {
-        if (isDecrease && paperSupply - amount * lengthOfGame >= 0)
+        if (amount<0 && paperSupply + amount * lengthOfGame >= 0)
         {
 
-            paperSupply -= amount * lengthOfGame;
+            paperSupply += amount * lengthOfGame;
 
         }
-        else if (isDecrease && paperSupply - amount * lengthOfGame < 0)
+        else if (amount<0 && paperSupply + amount * lengthOfGame < 0)
         {
             paperSupply = 0;
             Debug.Log("Minimum Paper Supply Reached");
         }
-        else if (isIncrease && paperSupply + amount * lengthOfGame <= 100)
+        else if (amount>0 && paperSupply + amount * lengthOfGame <= 100)
         {
             paperSupply += amount * lengthOfGame;
         }
-        else if (isIncrease && paperSupply + amount * lengthOfGame > 100)
+        else if (amount>0 && paperSupply + amount * lengthOfGame > 100)
         {
             paperSupply = 100;
             Debug.Log("Maximum Paper Supply Reached");
@@ -64,21 +64,21 @@ public class ResourceLogic : MonoBehaviour
 
 
 
-    public void modifyHappiness(int amount, Boolean isIncrease, Boolean isDecrease) 
+    public void modifyHappiness(int amount) 
     {
 
-        if (isDecrease && citizenHappiness- amount * lengthOfGame >= 0) {
+        if (amount<0 && citizenHappiness+ amount * lengthOfGame >= 0) {
 
-            citizenHappiness -= amount * lengthOfGame;
+            citizenHappiness += amount * lengthOfGame;
             
-        }else if (isDecrease && citizenHappiness- amount * lengthOfGame < 0)
+        }else if (amount<0 && citizenHappiness+ amount * lengthOfGame < 0)
         {
             citizenHappiness = 0;
             Debug.Log("Minimum Citizen Happiness Reached");
-        }else if (isIncrease && citizenHappiness+ amount * lengthOfGame <= 100)
+        }else if (amount>0 && citizenHappiness+ amount * lengthOfGame <= 100)
         {
             citizenHappiness += amount * lengthOfGame;
-        }else if (isIncrease && citizenHappiness+ amount * lengthOfGame > 100)
+        }else if (amount>0 && citizenHappiness+ amount * lengthOfGame > 100)
         {
             citizenHappiness = 100;
             Debug.Log("Maximum Citizen Happiness Reached");
@@ -88,28 +88,28 @@ public class ResourceLogic : MonoBehaviour
     }
 
 
-    public void modifyMoney(int amount, Boolean isIncrease, Boolean isDecrease)
+    public void modifyMoney(int amount)
     {
 
-        if (isDecrease && money - amount * lengthOfGame >= 0)
+        if (amount<0 && money + amount * lengthOfGame >= 0)
         {
 
-            money -= amount * lengthOfGame;
+            money += amount * lengthOfGame;
 
         }
-        else if (isDecrease && money - amount * lengthOfGame < 0)
+        else if (amount<0 && money + amount * lengthOfGame < 0)
         {
             money = 0;
-            Debug.Log("Minimum Citizen Happiness Reached");
+            Debug.Log("Minimum Money Reached");
         }
-        else if (isIncrease && money + amount * lengthOfGame <= 100)
+        else if (amount>0 && money + amount * lengthOfGame <= 100)
         {
             money += amount * lengthOfGame;
         }
-        else if (isIncrease && money + amount * lengthOfGame > 100)
+        else if (amount>0 && money + amount * lengthOfGame > 100)
         {
             money = 100;
-            Debug.Log("Maximum Citizen Happiness Reached");
+            Debug.Log("Maximum Money Reached");
         }
 
 
