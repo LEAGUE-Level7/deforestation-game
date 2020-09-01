@@ -1,10 +1,10 @@
-{ turn wood into goods ; yes : gain $1000-$10000 small decrease in forest ; no : increase in public opinion ; alot $50000-$100000 large decrease in forest }
-{ hire more staff ; hire 1 : you hire a worker; hire 2 : you hire 2 workers; hire 3 : you hire three workers}
-{ coverup ; yes : spend $10000-$25000 increase in public opinion ; no : nothing}
-{ license removal of forest ; yes : gain  $1000-$10000; no : public approval increases ; alot : gain $10,000-$100,000}
-{ invest in other companies? ; no : nothing ; a little : small immedieate decrease in $ later posibility of some$ ; more : middle ; most : large immedieate decrease in $ later posibility of larger $}
-{ increase quality of living for natives ; yes : public approval increases spend $10000-$25000 ; no : nothing}
-{ your forest is burning, give money for forest fighting; none : it burns ; $10000 : decreases somewhaT ; $50000 : decreases significantly}
-{ save an endangered species habitat ; no : decrease of approval from populace; yes : gain in revenue; move to zoo : slight annoyance from populace}
-{ you are loosing money. lay off staff? ; a few : in the middle ; nesecary : revenue normalizes ; none : chances of other failure}
-{ request government funding? ; yes : get some ammount based off of aproval ; no : nothing }
+{ Turn wood into goods? ; yes : gain $1000-$10000 small decrease in forest ; no : increase in public opinion ; alot $50000-$100000 large decrease in forest }
+{ Hire more staff? ; hire 1 : you hire a worker; hire 2 : you hire 2 workers; hire 3 : you hire three workers}
+{ Try to coverup your past deeds? ; yes : spend $10000-$25000 increase in public opinion ; no : nothing}
+{ Give a license for the removal of the forest? ; yes : gain  $1000-$10000; no : public approval increases ; alot : gain $10,000-$100,000}
+{ Invest in other companies? ; no : nothing ; a little : small immedieate decrease in $ later posibility of some$ ; more : middle ; most : large immedieate decrease in $ later posibility of larger $}
+{ Increase quality life for natives in your forest? ; yes : public approval increases spend $10000-$25000 ; no : nothing}
+{ Your forest is burning, give money for forest fighting? ; none : it burns ; $10000 : decreases somewhaT ; $50000 : decreases significantly}
+{ Save an endangered species habitat? ; no : decrease of approval from populace; yes : gain in revenue; move to zoo : slight annoyance from populace}
+{ You are loosing money. lay off staff? ; a few : in the middle ; nesecary : revenue normalizes ; none : chances of other failure}
+{ Request government funding? ; yes : get some ammount based off of aproval ; no : nothing }
