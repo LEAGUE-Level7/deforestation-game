@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Fillbar : MonoBehaviour {
+public class Fillbar : MonoBehaviour
+{
+
     // Unity UI References
     public Slider slider;
     public Text displayText;
-    public Button button;
-   
 
     // Create a property to handle the slider's value
     private float currentValue = 0f;
@@ -29,8 +27,6 @@ public class Fillbar : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Button btn = button.GetComponent<Button>();
-        btn.onClick.AddListener
         CurrentValue = 0f;
     }
 
@@ -38,10 +34,6 @@ public class Fillbar : MonoBehaviour {
     void Update()
     {
         CurrentValue += 0.0043f;
-    }
-    void TaskOnClick()
-    {
-        CurrentValue -= 10f;
     }
 }
 
