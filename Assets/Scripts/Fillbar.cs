@@ -20,7 +20,7 @@ public class Fillbar : MonoBehaviour
         {
             currentValue = value;
             slider.value = currentValue;
-            displayText.text = (slider.value * 100).ToString("0.00") + "%";
+            displayText.text = (slider.value * 100).ToString("0.0") + "%";
         }
     }
 
