@@ -1,0 +1,241 @@
+{
+  "Questions": [
+    {
+      "Question": "Turn wood into paper?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "None",
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": 1,
+              "MaxEffect": 1
+            }
+          ]
+        },
+        {
+          "AnswerText": "Some",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": 1000,
+              "MaxEffect": 10000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -5000,
+              "MaxEffect": -500
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -3,
+              "MaxEffect": -1
+            }
+          ]
+        },
+        {
+          "AnswerText": "Alot",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": 50000,
+              "MaxEffect": 100000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -5000,
+              "MaxEffect": -500
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -50,
+              "MaxEffect": -10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Question": "Try to coverup your past deeds?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "Yes",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": 10000,
+              "MaxEffect": 25000
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": 10,
+              "MaxEffect": 50
+            }
+          ]
+        },
+
+        {
+          "AnswerText": "No",
+          "Effects": []
+        }
+      ]
+    },
+    {
+      "Question": "Do you want to your sell ownership of part of your forest, if so how much?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "None",
+          "Effects": []
+        },
+        {
+          "AnswerText": "Some",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": 1000,
+              "MaxEffect": 10000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -50,
+              "MaxEffect": -10
+            }
+          ]
+        },
+        {
+          "AnswerText": "Alot",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": 10000,
+              "MaxEffect": 100000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -500,
+              "MaxEffect": -100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Question": "Your forest is burning, fund fire fighters, and how much?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "None",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -10000,
+              "MaxEffect": -1000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -50000,
+              "MaxEffect": -1000
+            }
+          ]
+        },
+        {
+          "AnswerText": "Some",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -40000,
+              "MaxEffect": -4000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -5000,
+              "MaxEffect": -20
+            }
+          ]
+        },
+        {
+          "AnswerText": "Alot",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -90000,
+              "MaxEffect": -9000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -8,
+              "MaxEffect": -2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Question": "Save an endangered species habitat?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "No",
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -20,
+              "MaxEffect": -10
+            }
+          ]
+        },
+        {
+          "AnswerText": "Yes",
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": 12,
+              "MaxEffect": 30
+            }
+          ]
+        },
+        {
+          "AnswerText": "Move to zoo",
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -10,
+              "MaxEffect": -5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Question": "Request bank loan?",
+      "ConditionType": "Money",
+      "ConditionMin": -10000,
+      "ConditionMax": 1000,
+
+      "Answers": [
+        {
+          "AnswerText": "Yes",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": 1000,
+              "MaxEffect": 5000
+            }
+          ]
+        },
+        {
+          "AnswerText": "No",
+          "Effects": []
+        }
+      ]
+    }
+  ]
+}
