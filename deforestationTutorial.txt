@@ -1,0 +1,14 @@
+Welcome to *the Deforestation Game!* (is there an official name we decided on?)
+
+
+This game was designed to help educate people about the environment by letting you run a paper business!
+Your job is to make sure the environment stays stable and healthy while still making a profit and keeping everyone happy.
+
+There are 3 main things you need to focus on: 
+The forest
+Production
+Social Opinion
+
+If any of these reach 0, like say your production goes down to 0, then you lose. Your job is to answer questions and see how those questions affect your business. For example, you may get a question that asks if you'd like to buy a new machine that makes more paper at a faster pace, and that may increase production and make your reputation go up with better and cheaper products, but it could also damage the environent by producing more smog. You need to find a way to balance out everything to make sure that you keep production up to make money, make sure your social reputation is high enough to keep profits and relavance high, and keep your environment safe so that you don't run out of resources.
+
+With each choice you make, you'll be able to see how it affects you in real time. The different values will show up on bars at the top, and you can see as each one grows and shrinks, making certain things a bigger priority than others if they begin to dip too low. 
