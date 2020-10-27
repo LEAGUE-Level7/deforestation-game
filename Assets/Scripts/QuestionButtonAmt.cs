@@ -13,14 +13,15 @@ public class QuestionButtonAmt : MonoBehaviour
     //[SerializeField] int buttonAmount;
     [SerializeField] String question;
     [SerializeField] String[] buttons;
+    [SerializeField] String[] questions;
+    [SerializeField] String[] choices;
     [SerializeField] int spacing;
-
+    [SerializeField] int n;
     void Start()
     {
         //pass in the original text object and then the question as a string
         setQuestion(questionText, question);
         //pass in the original button and then a string array of the answers
-
         createButtons(button, buttons);
     }
 
@@ -28,11 +29,14 @@ public class QuestionButtonAmt : MonoBehaviour
     {
         questionText.text = question;
     }
+    void onCLickChoice(GameObject originalButton, int n)
+    {
+        Debug.Log("clicked");
+    }
 
     void createButtons(GameObject originalButton, String[] answers)
     {
         float originalX = button.transform.position.x;
-
         Text ButtonText = originalButton.GetComponentInChildren(typeof(Text)) as Text;
         ButtonText.text = answers[0];
 
