@@ -10,7 +10,7 @@ public class MenuNavigation : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        Debug.Log("Game Started");
+        Debug.Log("Game Started" + SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

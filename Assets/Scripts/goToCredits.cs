@@ -7,7 +7,7 @@ public class goToCredits : MonoBehaviour
 {
     public void toCredits()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         Debug.Log("Going to credits");
     }
 }
