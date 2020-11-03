@@ -11,7 +11,7 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] GameObject button;
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
-    const string quesFile = "C:\\Users\\Cindy\\Desktop\\deforestation-game\\Assets\\Questions\\Questions.json";
+   const string quesFile = "Questions\\Questions.json";
     //[SerializeField] int buttonAmount;
     [SerializeField] String question;
     [SerializeField] String answer;
@@ -22,13 +22,16 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] int n;
     void Start()
     {
-        //pass in the original text object and then the question as a string
-        setQuestion(questionText, question);
+        string fileName = Path.Combine(Application.dataPath, quesFile);
+       
+            //pass in the original text object and then the question as a string
+        setQuestion(questionText, question, fileName);
         //pass in the original button and then a string array of the answers
         createButtons(button, buttons,answer);
     }
-    void setQuestion(Text questionText, String question) {
-        string fileName = Path.Combine(Application.dataPath, quesFile);
+
+    void setQuestion(Text questionText, String question, String fileName) {
+        Debug.Log(fileName);
         using (StreamReader r = new StreamReader(fileName))
         {
             string json = r.ReadToEnd();
