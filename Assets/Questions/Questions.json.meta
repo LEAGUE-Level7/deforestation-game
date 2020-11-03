@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 229bcb7fcf3be534b90be4a7a26eb73e
+=======
+guid: 514d01e1d98c15c4dbf7ca0800153511
+>>>>>>> 3c6d54d... Added outline for buttons that change resources
 TextScriptImporter:
   externalObjects: {}
   userData: 

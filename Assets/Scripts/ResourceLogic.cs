@@ -18,10 +18,12 @@ public class ResourceLogic : MonoBehaviour
 
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
 
-    public void modifyPaperSupply(int amount)
+    public void modifyForestSupply(int amount)
     {
 
         int amountChanged = paperSupply + amount * lengthOfGame;
+
+        Debug.Log("You Have " + amountChanged + " Paper");
 
         if (amount<0 &&  amountChanged >= 0)
         {

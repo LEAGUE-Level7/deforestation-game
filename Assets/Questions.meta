@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d9516fecc11fea64993e01a475abb7ae
+=======
+guid: 98b6c9821f0692b48b6a1520dc78259c
+>>>>>>> 3c6d54d... Added outline for buttons that change resources
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
