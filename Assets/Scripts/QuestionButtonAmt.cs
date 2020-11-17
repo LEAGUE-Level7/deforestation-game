@@ -12,11 +12,9 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
    const string quesFile = "Questions\\Questions.json";
-    //[SerializeField] int buttonAmount;
     [SerializeField] String question;
     [SerializeField] String answer;
     [SerializeField] String[] buttons;
-   //  [SerializeField] String[] questions;
     [SerializeField] String[] choices;
     [SerializeField] int spacing;
     [SerializeField] int n;
@@ -45,22 +43,6 @@ public class QuestionButtonAmt : MonoBehaviour
         questionText.text = question;
             
     }
-   /* void setAnswers(Text answerText, String answer)
-    {
-        string fileName = Path.Combine(Application.dataPath, quesFile);
-        using (StreamReader r = new StreamReader(fileName))
-        {
-            string json = r.ReadToEnd();
-            QuestionLists items = JsonUtility.FromJson<QuestionLists>(json);
-            for (int i = 0; i <; i++)
-            {
-                answer = items.Questions[i].Answers[i].AnswerText;
-                Debug.Log(items.Questions[i].Answers[i].AnswerText);
-            }
-        }
-        answerText.text = answer;
-
-    }*/
     void onCLickChoice(GameObject originalButton, int n)
     {
         Debug.Log("clicked");
@@ -70,7 +52,6 @@ public class QuestionButtonAmt : MonoBehaviour
     {
         float originalX = button.transform.position.x;
         Text ButtonText = originalButton.GetComponentInChildren(typeof(Text)) as Text;
-        //setAnswers(answerText, answer);
         for (int i = 1; i < answers.Length; i++)
         {
             answers[i] = answer;
@@ -94,14 +75,6 @@ public class QuestionLists
 public class Questions
 {
     public string Question;
- //  public Answers[] Answers;
     public string ConditionType;
     public bool placeholderTile;
 }
-//[Serializable]
-/*public class Answers
-{
-    public string AnswerText;
-    public string ConditionType;
-    public bool placeholderTile;
-}*/
