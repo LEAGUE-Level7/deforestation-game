@@ -20,6 +20,9 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] String[] choices;
     [SerializeField] int spacing;
     [SerializeField] int n;
+    int selectedQuestionID;
+
+
     void Start()
     {
         string fileName = Path.Combine(Application.dataPath, quesFile);
@@ -36,14 +39,17 @@ public class QuestionButtonAmt : MonoBehaviour
         {
             string json = r.ReadToEnd();
             QuestionLists items = JsonUtility.FromJson<QuestionLists>(json);
-            for (int i = 0; i < items.Questions.Length; i++)
+            /*for (int i = 0; i < items.Questions.Length; i++)
             {
                 question = items.Questions[i].Question;
                 Debug.Log(items.Questions[i].Question);
-            }
+            }*/
+           
+            selectedQuestionID = (int) Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
+            questionText.text = items.Questions[selectedQuestionID].Question;
+
         }
-        questionText.text = question;
-            
+
     }
    /* void setAnswers(Text answerText, String answer)
     {
@@ -70,6 +76,8 @@ public class QuestionButtonAmt : MonoBehaviour
     {
         float originalX = button.transform.position.x;
         Text ButtonText = originalButton.GetComponentInChildren(typeof(Text)) as Text;
+
+        //button.Text = selectedQuestionID.ToString() + "";
         //setAnswers(answerText, answer);
         for (int i = 1; i < answers.Length; i++)
         {
@@ -87,21 +95,29 @@ public class QuestionButtonAmt : MonoBehaviour
 }
 [Serializable]
 public class QuestionLists
-{ 
+{
     public Questions[] Questions;
 }
 [Serializable]
 public class Questions
 {
     public string Question;
- //  public Answers[] Answers;
+    public Answers[] Answers;
     public string ConditionType;
     public bool placeholderTile;
 }
-//[Serializable]
-/*public class Answers
+[Serializable]
+public class Answers
 {
     public string AnswerText;
-    public string ConditionType;
-    public bool placeholderTile;
-}*/
+    public Effects[] Effects;
+}
+
+[Serializable]
+public class Effects
+{
+    public string Type;
+    public int MinEffect;
+    public int MaxEffect;
+
+}
