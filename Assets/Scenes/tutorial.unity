@@ -547,25 +547,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to *the Deforestation Game!* (is there an official name we decided
-    on?)\r\n\r\n\r\nThis game was designed to help educate people about the environment
-    by letting you run a paper business!\r\nYour job is to make sure the environment
-    stays stable and healthy while still making a profit and keeping everyone happy.\r\n\r\nThere
-    are 3 main things you need to focus on: \r\nThe forest\r\nProduction\r\nSocial
-    Opinion\r\n\r\nIf any of these reach 0, like say your production goes down to
-    0, then you lose. Your job is to answer questions and see how those questions
-    affect your business. For example, you may get a question that asks if you'd
-    like to buy a new machine that makes more paper at a faster pace, and that may
-    increase production and make your reputation go up with better and cheaper products,
-    but it could also damage the environent by producing more smog. You need to find
-    a way to balance out everything to make sure that you keep production up to make
-    money, make sure your social reputation is high enough to keep profits and relavance
-    high, and keep your environment safe so that you don't run out of resources.\r\n\r\nWith
-    each choice you make, you'll be able to see how it affects you in real time.
-    The different values will show up on bars at the top, and you can see as each
-    one grows and shrinks, making certain things a bigger priority than others if
-    they begin to dip too low. \n\nIf you can survive and stay afloat for an in-game
-    year, you win! Can you make a \nsuccessful eco-friendly business?"
+  m_Text: "Welcome to the Deforestation Game!\n\n\nThis game was designed to help
+    educate people about the environment by letting you run a paper business!\nYour
+    job is to ensure the environment stays stable and healthy while still making
+    a profit and keeping everyone happy.\n\nThere are 3 main things you need to focus
+    on: \nThe forest\nProduction\nSocial Opinion\n\nIf any of these reach 0, like
+    say your production goes down to 0, you lose. Your job is to answer questions
+    and see how those questions affect your business. For example, you may get a
+    question that asks if you'd like to buy a new machine that makes more paper at
+    a faster pace, and that may increase production and make your reputation go up
+    with better and cheaper products, but it could also damage the environment by
+    producing more smog. You need to find a way to balance out everything to make
+    sure that you keep production up to make money, make sure your social reputation
+    is high enough to keep profits and relevance high and keep your environment safe
+    so that you don't run out of resources.\n\nWith each choice you make, you'll
+    be able to see how it affects you in real-time. The different values will show
+    up on bars at the top, and you can see as each one grows and shrinks, making
+    certain things a bigger priority than others if they begin to dip too low. \n\nIf
+    you can survive and stay afloat for an in-game year, you win! Can you make a
+    \nsuccessful eco-friendly business?"
 --- !u!222 &1253933514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -608,8 +608,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -6.3942}
-  m_SizeDelta: {x: 891.906, y: 506.21167}
+  m_AnchoredPosition: {x: 2.32, y: -6.3942}
+  m_SizeDelta: {x: 886.4673, y: 506.21167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482492598
 MonoBehaviour:
@@ -643,25 +643,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to *the Deforestation Game!* (is there an official name we decided
-    on?)\r\n\r\n\r\nThis game was designed to help educate people about the environment
-    by letting you run a paper business!\r\nYour job is to make sure the environment
-    stays stable and healthy while still making a profit and keeping everyone happy.\r\n\r\nThere
-    are 3 main things you need to focus on: \r\nThe forest\r\nProduction\r\nSocial
-    Opinion\r\n\r\nIf any of these reach 0, like say your production goes down to
-    0, then you lose. Your job is to answer questions and see how those questions
-    affect your business. For example, you may get a question that asks if you'd
-    like to buy a new machine that makes more paper at a faster pace, and that may
-    increase production and make your reputation go up with better and cheaper products,
-    but it could also damage the environent by producing more smog. You need to find
-    a way to balance out everything to make sure that you keep production up to make
-    money, make sure your social reputation is high enough to keep profits and relavance
-    high, and keep your environment safe so that you don't run out of resources.\r\n\r\nWith
-    each choice you make, you'll be able to see how it affects you in real time.
-    The different values will show up on bars at the top, and you can see as each
-    one grows and shrinks, making certain things a bigger priority than others if
-    they begin to dip too low. \n\nIf you can survive and stay afloat for an in-game
-    year, you win! Can you make a \nsuccessful eco-friendly business?"
+  m_Text: "Welcome to the Deforestation Game!\n\n\nThis game was designed to help
+    educate people about the environment by letting you run a paper business!\nYour
+    job is to ensure the environment stays stable and healthy while still making
+    a profit and keeping everyone happy.\n\nThere are 3 main things you need to focus
+    on: \nThe forest\nProduction\nSocial Opinion\n\nIf any of these reach 0, like
+    say your production goes down to 0, you lose. Your job is to answer questions
+    and see how those questions affect your business. For example, you may get a
+    question that asks if you'd like to buy a new machine that makes more paper at
+    a faster pace, and that may increase production and make your reputation go up
+    with better and cheaper products, but it could also damage the environment by
+    producing more smog. You need to find a way to balance out everything to make
+    sure that you keep production up to make money, make sure your social reputation
+    is high enough to keep profits and relevance high and keep your environment safe
+    so that you don't run out of resources.\n\nWith each choice you make, you'll
+    be able to see how it affects you in real-time. The different values will show
+    up on bars at the top, and you can see as each one grows and shrinks, making
+    certain things a bigger priority than others if they begin to dip too low. \n\nIf
+    you can survive and stay afloat for an in-game year, you win! Can you make a
+    \nsuccessful eco-friendly business?"
 --- !u!222 &1482492599
 CanvasRenderer:
   m_ObjectHideFlags: 0
