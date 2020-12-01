@@ -12,31 +12,27 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
    const string quesFile = "Questions\\Questions.json";
-    //[SerializeField] int buttonAmount;
-    [SerializeField] String question;
-    [SerializeField] String answer;
-    [SerializeField] String[] buttons;
-   //  [SerializeField] String[] questions;
-    [SerializeField] String[] choices;
+
     [SerializeField] int spacing;
-    [SerializeField] int n;
+
+    [SerializeField] ResourceLogic resourceManager;
+
+
+    //[SerializeField] int n;
     int selectedQuestionID;
 
 
     void Start()
     {
         string fileName = Path.Combine(Application.dataPath, quesFile);
-       
-            //pass in the original text object and then the question as a string
-        setQuestion(questionText, question, fileName);
-        //pass in the original button and then a string array of the answers
-        createButtons(button, buttons,answer);
-    }
 
-    void setQuestion(Text questionText, String question, String fileName) {
+        //pass in the original text object and then the question as a string
+        //setQuestion(questionText, question, fileName);
         Debug.Log(fileName);
         using (StreamReader r = new StreamReader(fileName))
         {
+
+            
             string json = r.ReadToEnd();
             QuestionLists items = JsonUtility.FromJson<QuestionLists>(json);
             /*for (int i = 0; i < items.Questions.Length; i++)
@@ -44,13 +40,42 @@ public class QuestionButtonAmt : MonoBehaviour
                 question = items.Questions[i].Question;
                 Debug.Log(items.Questions[i].Question);
             }*/
-           
-            selectedQuestionID = (int) Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
-            questionText.text = items.Questions[selectedQuestionID].Question;
 
+            selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
+            questionText.text = items.Questions[selectedQuestionID].Question;
+            print("Hello");
+            print(items.Questions[1].Answers[0].AnswerText);
+
+
+            //pass in the original button and then a string array of the answers
+
+            string[] questions = new String[items.Questions[selectedQuestionID].Answers.Length];
+            string[] types = new String[items.Questions[selectedQuestionID].Answers.Length];
+            int[] max = new int[items.Questions[selectedQuestionID].Answers.Length];
+            int[] min = new int[items.Questions[selectedQuestionID].Answers.Length];
+
+            for (int i = 0; i < items.Questions[selectedQuestionID].Answers.Length; i++)
+            {
+                questions[i] = items.Questions[selectedQuestionID].Answers[i].AnswerText;
+
+                //for (int j = 0; j < items.Questions[selectedQuestionID].Answers[i].Effects.Length; j++)
+                //{
+                //  types[i] = items.Questions[selectedQuestionID].Answers[i].Effects[j].Type;
+                //}
+                types[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].Type;
+                min[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].MinEffect;
+                max[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].MaxEffect;
+
+
+            }
+
+
+            createButtons(button, questions, types, max, min);
         }
 
     }
+
+
    /* void setAnswers(Text answerText, String answer)
     {
         string fileName = Path.Combine(Application.dataPath, quesFile);
@@ -72,16 +97,21 @@ public class QuestionButtonAmt : MonoBehaviour
         Debug.Log("clicked");
     }
 
-    void createButtons(GameObject originalButton, String[] answers, string answer)
+    void createButtons(GameObject originalButton, String[] answers, String[] types, int[] max, int[] min)
     {
         float originalX = button.transform.position.x;
+
+
         Text ButtonText = originalButton.GetComponentInChildren(typeof(Text)) as Text;
 
-        //button.Text = selectedQuestionID.ToString() + "";
-        //setAnswers(answerText, answer);
+        ButtonText = button.GetComponentInChildren(typeof(Text)) as Text;
+        ButtonText.text = answers[0];
+        originalButton.GetComponent<Button>().onClick.AddListener(delegate {
+            updateResources(types[0], (int)UnityEngine.Random.Range(min[0], max[0]));
+        });
+
         for (int i = 1; i < answers.Length; i++)
         {
-            answers[i] = answer;
             GameObject ButtonClone = Instantiate(originalButton);
             ButtonClone.name = "Choice " + (i + 1);
             Vector3 position = new Vector3(button.transform.position.x, button.transform.position.y - (i * spacing), 0);
@@ -90,9 +120,39 @@ public class QuestionButtonAmt : MonoBehaviour
             ButtonText.text = answers[i];
             ButtonClone.transform.parent = GameObject.Find("Questions-Canvas/Choice 1").transform.parent;
 
+            int j = i;
+            ButtonClone.GetComponent<Button>().onClick.AddListener(delegate {
+                updateResources(types[j], (int) UnityEngine.Random.Range(min[j], max[j]));
+            });
+        }
+    }
+    public void updateResources(String r, int amount)
+    {
+        switch (r) {
+            case "Money":
+                print(resourceManager.getMoney() + " " + amount);
+
+                resourceManager.modifyMoney(amount);
+                print(resourceManager.getMoney());
+                break;
+            case "Forest":
+                print(resourceManager.getPaperSupply() + " " + amount);
+
+                resourceManager.modifyPaperSupply(amount);
+                print(resourceManager.getPaperSupply());
+                break;
+            case "PublicOpinion":
+                print(resourceManager.getCitizenHappiness() + " " + amount);
+                resourceManager.modifyHappiness(amount);
+                print(resourceManager.getCitizenHappiness());
+                break;
+
         }
     }
 }
+
+
+
 [Serializable]
 public class QuestionLists
 {
