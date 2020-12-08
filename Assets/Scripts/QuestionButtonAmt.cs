@@ -41,8 +41,8 @@ public class QuestionButtonAmt : MonoBehaviour
                 Debug.Log(items.Questions[i].Question);
             }*/
 
-            //selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
-            selectedQuestionID = 3;
+            selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
+
 
             questionText.text = items.Questions[selectedQuestionID].Question;
 
