@@ -1607,13 +1607,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 944745212}
   questionText: {fileID: 581779089}
-  question: Why?
-  buttons:
-  - abc 1
-  - 2324
-  - 54332xsds
-  - dfsfd
+  answerText: {fileID: 0}
   spacing: 55
+  resourceManager: {fileID: 185391571}
 --- !u!1 &2060516172
 GameObject:
   m_ObjectHideFlags: 0

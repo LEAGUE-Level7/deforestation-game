@@ -41,34 +41,36 @@ public class QuestionButtonAmt : MonoBehaviour
                 Debug.Log(items.Questions[i].Question);
             }*/
 
-            selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
+            //selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
+            selectedQuestionID = 3;
+
             questionText.text = items.Questions[selectedQuestionID].Question;
-            print("Hello");
-            print(items.Questions[1].Answers[0].AnswerText);
+
 
 
             //pass in the original button and then a string array of the answers
 
             string[] questions = new String[items.Questions[selectedQuestionID].Answers.Length];
-            string[] types = new String[items.Questions[selectedQuestionID].Answers.Length];
-            int[] max = new int[items.Questions[selectedQuestionID].Answers.Length];
-            int[] min = new int[items.Questions[selectedQuestionID].Answers.Length];
+            string[,] types = new String[items.Questions[selectedQuestionID].Answers.Length,8];
+            int[,] max = new int[items.Questions[selectedQuestionID].Answers.Length,8];
+            int[,] min = new int[items.Questions[selectedQuestionID].Answers.Length,8];
 
             for (int i = 0; i < items.Questions[selectedQuestionID].Answers.Length; i++)
             {
                 questions[i] = items.Questions[selectedQuestionID].Answers[i].AnswerText;
 
-                //for (int j = 0; j < items.Questions[selectedQuestionID].Answers[i].Effects.Length; j++)
-                //{
-                //  types[i] = items.Questions[selectedQuestionID].Answers[i].Effects[j].Type;
-                //}
-                types[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].Type;
-                min[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].MinEffect;
-                max[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].MaxEffect;
+                for (int j = 0; j < items.Questions[selectedQuestionID].Answers[i].Effects.Length; j++)
+                {
+                    types[i,j] = items.Questions[selectedQuestionID].Answers[i].Effects[j].Type;
+                    min[i,j] = items.Questions[selectedQuestionID].Answers[i].Effects[j].MinEffect;
+                    max[i,j] = items.Questions[selectedQuestionID].Answers[i].Effects[j].MaxEffect;
+                }
+                //types[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].Type;
+                //min[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].MinEffect;
+                //max[i] = items.Questions[selectedQuestionID].Answers[i].Effects[0].MaxEffect;
 
 
             }
-
 
             createButtons(button, questions, types, max, min);
         }
@@ -97,7 +99,7 @@ public class QuestionButtonAmt : MonoBehaviour
         Debug.Log("clicked");
     }
 
-    void createButtons(GameObject originalButton, String[] answers, String[] types, int[] max, int[] min)
+    void createButtons(GameObject originalButton, String[] answers, String[,] types, int[,] max, int[,] min)
     {
         float originalX = button.transform.position.x;
 
@@ -107,7 +109,12 @@ public class QuestionButtonAmt : MonoBehaviour
         ButtonText = button.GetComponentInChildren(typeof(Text)) as Text;
         ButtonText.text = answers[0];
         originalButton.GetComponent<Button>().onClick.AddListener(delegate {
-            updateResources(types[0], (int)UnityEngine.Random.Range(min[0], max[0]));
+            for(int i = 0; i < 8; i++)
+            {
+
+                updateResources(types[0, i], (int)UnityEngine.Random.Range(min[0, i], max[0, i]));
+                
+            }
         });
 
         for (int i = 1; i < answers.Length; i++)
@@ -122,7 +129,15 @@ public class QuestionButtonAmt : MonoBehaviour
 
             int j = i;
             ButtonClone.GetComponent<Button>().onClick.AddListener(delegate {
-                updateResources(types[j], (int) UnityEngine.Random.Range(min[j], max[j]));
+                for (int l = 0; l < 8; l++)
+                {
+                    updateResources(types[j,l], (int)UnityEngine.Random.Range(min[j,l], max[j,l]));
+                }
+                //for (int l = 0; l < min[0].Length; l++)
+                //{
+                //   updateResources(types[j][l], (int)UnityEngine.Random.Range(min[j][l], max[j][l]));
+                //}
+                //updateResources(types[j], (int) UnityEngine.Random.Range(min[j], max[j]));
             });
         }
     }
@@ -130,21 +145,21 @@ public class QuestionButtonAmt : MonoBehaviour
     {
         switch (r) {
             case "Money":
-                print(resourceManager.getMoney() + " " + amount);
+                //print(resourceManager.getMoney() + " " + amount);
 
                 resourceManager.modifyMoney(amount);
-                print(resourceManager.getMoney());
+                //print(resourceManager.getMoney());
                 break;
             case "Forest":
-                print(resourceManager.getPaperSupply() + " " + amount);
+                //print(resourceManager.getPaperSupply() + " " + amount);
 
                 resourceManager.modifyPaperSupply(amount);
-                print(resourceManager.getPaperSupply());
+                //print(resourceManager.getPaperSupply());
                 break;
             case "PublicOpinion":
-                print(resourceManager.getCitizenHappiness() + " " + amount);
+                //print(resourceManager.getCitizenHappiness() + " " + amount);
                 resourceManager.modifyHappiness(amount);
-                print(resourceManager.getCitizenHappiness());
+                //print(resourceManager.getCitizenHappiness());
                 break;
 
         }
