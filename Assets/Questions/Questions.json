@@ -85,7 +85,7 @@
       ]
     },
     {
-      "Question": "Do you want to your sell ownership of part of your forest, if so how much?",
+        "Question": "  Do you want to sell a share of     your forest, if so how much?",
       "ConditionType": "Any",
 
       "Answers": [
