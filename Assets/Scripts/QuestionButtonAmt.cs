@@ -22,12 +22,12 @@ public class QuestionButtonAmt : MonoBehaviour
     int selectedQuestionID;
 
 
+    public static int lastQuestionID = -1;
+
     void Start()
     {
         setup();
-        button.GetComponent<Button>().onClick.AddListener(delegate {
-            reset();
-        });
+
     }
 
 
@@ -46,6 +46,7 @@ public class QuestionButtonAmt : MonoBehaviour
 
 
         }
+        button.GetComponent<Button>().onClick.RemoveAllListeners();
         setup();
 
     }
@@ -70,7 +71,10 @@ public class QuestionButtonAmt : MonoBehaviour
             }*/
 
             selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
-
+            while(lastQuestionID == selectedQuestionID)
+            {
+                selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
+            }
 
             questionText.text = items.Questions[selectedQuestionID].Question;
 
@@ -101,6 +105,7 @@ public class QuestionButtonAmt : MonoBehaviour
             }
 
             createButtons(button, questions, types, max, min);
+            lastQuestionID = selectedQuestionID;
         }
 
     }
@@ -136,12 +141,13 @@ void createButtons(GameObject originalButton, String[] answers, String[,] types,
 
         ButtonText = button.GetComponentInChildren(typeof(Text)) as Text;
         ButtonText.text = answers[0];
+        
         originalButton.GetComponent<Button>().onClick.AddListener(delegate {
             for (int l = 0; l < 8; l++)
             {
                 updateResources(types[0, l], (int)UnityEngine.Random.Range(min[0, l], max[0, l]));
             }
-            //reset();
+            reset();
         });
 
         for (int i = 1; i < answers.Length; i++)
