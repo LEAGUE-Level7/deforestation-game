@@ -138,7 +138,13 @@ public class ResourceLogic : MonoBehaviour
     }
 
 
+    public void changeBackground()
+    {
+        if (money == 0 || money < 0)
+        {
 
+        }
+    }
 
 
 }
