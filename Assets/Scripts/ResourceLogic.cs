@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResourceLogic : MonoBehaviour
 {
@@ -13,7 +14,12 @@ public class ResourceLogic : MonoBehaviour
     //value is out of 5 with a HIGHER VALUE = SHORTER GAME!!
     private int lengthOfGame = 2;
     private bool hasSetLength = false;
-
+    Sprite ENVI1 = Resources.Load<Sprite>("environment1");
+    Sprite ENVI2 = Resources.Load<Sprite>("environment2");
+    Sprite ENVI3 = Resources.Load<Sprite>("environment3");
+    Sprite ENVI4 = Resources.Load<Sprite>("environment4");
+    Sprite ENVI5 = Resources.Load<Sprite>("environment5");
+    Sprite ENVI6 = Resources.Load<Sprite>("environment6");
 
 
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
@@ -140,10 +146,33 @@ public class ResourceLogic : MonoBehaviour
 
     public void changeBackground()
     {
-        if (money == 0 || money < 0)
-        {
+        Image image = gameObject.GetComponent<Image>();
 
+        if (money == 0 || money < 17)
+        {
+            image.sprite = ENVI6;
         }
+        else if (money == 17 || money < 33)
+        {
+            image.sprite = ENVI5;
+        }
+        else if (money == 33 || money < 50)
+        {
+            image.sprite = ENVI4;
+        }
+        else if (money == 50 || money < 67)
+        {
+            image.sprite = ENVI3;
+        }
+        else if (money == 67 || money < 83)
+        {
+            image.sprite = ENVI2;
+        }
+        else if (money == 83 || money < 100)
+        {
+            image.sprite = ENVI1;
+        }
+
     }
 
 
