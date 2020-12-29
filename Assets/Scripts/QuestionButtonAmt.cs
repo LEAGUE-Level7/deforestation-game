@@ -11,7 +11,7 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] GameObject button;
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
-   const string quesFile = "Questions\\Questions.json";
+   const string quesFile = "Questions/Questions.json";
 
     [SerializeField] int spacing;
 
