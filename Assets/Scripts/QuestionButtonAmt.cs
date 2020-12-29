@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestionButtonAmt : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] GameObject button;
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
-   const string quesFile = "Questions\\Questions.json";
+   const string quesFile = "Questions/Questions.json";
 
     [SerializeField] int spacing;
 
@@ -30,7 +31,8 @@ public class QuestionButtonAmt : MonoBehaviour
 
     }
 
-
+    public static int questionQuota = 5;
+    public static int questionsDone = 0;
     public void reset()
     {
         for (int i = 2; i < 10; i++)
@@ -46,13 +48,23 @@ public class QuestionButtonAmt : MonoBehaviour
 
 
         }
+        print((resourceManager.getMoney() ).ToString() + " " + (resourceManager.getCitizenHappiness()).ToString() + " " + (resourceManager.getPaperSupply() ).ToString());
+        questionsDone++;
+        if (questionsDone > questionQuota && resourceManager.getMoney() > 0 && resourceManager.getCitizenHappiness() > 0 && resourceManager.getPaperSupply() > 0)
+        {
+            SceneManager.LoadScene(4);
+        }
+
+        if (!(resourceManager.getMoney() > 0 && resourceManager.getCitizenHappiness() > 0 && resourceManager.getPaperSupply() > 0)){
+            SceneManager.LoadScene(5);
+        }
+
         button.GetComponent<Button>().onClick.RemoveAllListeners();
         setup();
 
     }
     public void setup()
     {
-        print("e");
         string fileName = Path.Combine(Application.dataPath, quesFile);
 
         //pass in the original text object and then the question as a string
