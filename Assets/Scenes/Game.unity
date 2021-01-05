@@ -716,6 +716,7 @@ GameObject:
   - component: {fileID: 581779088}
   - component: {fileID: 581779090}
   - component: {fileID: 581779089}
+  - component: {fileID: 581779091}
   m_Layer: 5
   m_Name: Question
   m_TagString: Untagged
@@ -783,6 +784,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581779087}
   m_CullTransparentMesh: 0
+--- !u!114 &581779091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581779087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 0
 --- !u!1 &631114003
 GameObject:
   m_ObjectHideFlags: 0
