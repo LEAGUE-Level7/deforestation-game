@@ -1,9 +1,11 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestionButtonAmt : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class QuestionButtonAmt : MonoBehaviour
     [SerializeField] GameObject button;
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
-   const string quesFile = "Questions\\Questions.json";
+    const string quesFile = "Questions/Questions.json";
 
     [SerializeField] int spacing;
 
@@ -30,7 +32,8 @@ public class QuestionButtonAmt : MonoBehaviour
 
     }
 
-
+    public static int questionQuota = 5;
+    public static int questionsDone = 0;
     public void reset()
     {
         for (int i = 2; i < 10; i++)
@@ -42,17 +45,28 @@ public class QuestionButtonAmt : MonoBehaviour
                 Destroy(go.gameObject);
             }
             catch (Exception e) { }
-                
+
 
 
         }
+        print((resourceManager.getMoney()).ToString() + " " + (resourceManager.getCitizenHappiness()).ToString() + " " + (resourceManager.getPaperSupply()).ToString());
+        questionsDone++;
+        if (questionsDone > questionQuota && resourceManager.getMoney() > 0 && resourceManager.getCitizenHappiness() > 0 && resourceManager.getPaperSupply() > 0)
+        {
+            SceneManager.LoadScene(4);
+        }
+
+        if (!(resourceManager.getMoney() > 0 && resourceManager.getCitizenHappiness() > 0 && resourceManager.getPaperSupply() > 0))
+        {
+            SceneManager.LoadScene(5);
+        }
+
         button.GetComponent<Button>().onClick.RemoveAllListeners();
         setup();
 
     }
     public void setup()
     {
-        print("e");
         string fileName = Path.Combine(Application.dataPath, quesFile);
 
         //pass in the original text object and then the question as a string
@@ -71,7 +85,7 @@ public class QuestionButtonAmt : MonoBehaviour
             }*/
 
             selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
-            while(lastQuestionID == selectedQuestionID)
+            while (lastQuestionID == selectedQuestionID)
             {
                 selectedQuestionID = (int)Math.Floor((float)(new System.Random().NextDouble()) * items.Questions.Length);
             }
@@ -125,14 +139,13 @@ public class QuestionButtonAmt : MonoBehaviour
              }
          }
          answerText.text = answer;
-
      }*/
     void onCLickChoice(GameObject originalButton, int n)
     {
         Debug.Log("clicked");
     }
 
-void createButtons(GameObject originalButton, String[] answers, String[,] types, int[,] max, int[,] min)
+    void createButtons(GameObject originalButton, String[] answers, String[,] types, int[,] max, int[,] min)
     {
         float originalX = button.transform.position.x;
 
@@ -141,7 +154,7 @@ void createButtons(GameObject originalButton, String[] answers, String[,] types,
 
         ButtonText = button.GetComponentInChildren(typeof(Text)) as Text;
         ButtonText.text = answers[0];
-        
+
         originalButton.GetComponent<Button>().onClick.AddListener(delegate {
             for (int l = 0; l < 8; l++)
             {
@@ -164,7 +177,7 @@ void createButtons(GameObject originalButton, String[] answers, String[,] types,
             ButtonClone.GetComponent<Button>().onClick.AddListener(delegate {
                 for (int l = 0; l < 8; l++)
                 {
-                    updateResources(types[j,l], (int)UnityEngine.Random.Range(min[j,l], max[j,l]));
+                    updateResources(types[j, l], (int)UnityEngine.Random.Range(min[j, l], max[j, l]));
                 }
                 reset();
             });
@@ -175,7 +188,8 @@ void createButtons(GameObject originalButton, String[] answers, String[,] types,
 
     public void updateResources(String r, int amount)
     {
-        switch (r) {
+        switch (r)
+        {
             case "Money":
                 //print(resourceManager.getMoney() + " " + amount);
 
