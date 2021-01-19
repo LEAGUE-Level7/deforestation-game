@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResourceLogic : MonoBehaviour
 {
@@ -14,10 +15,29 @@ public class ResourceLogic : MonoBehaviour
     private int lengthOfGame = 2;
     private bool hasSetLength = false;
 
-
-
+    [SerializeField] public Slider paperSlider;
+    [SerializeField] public Slider happySlider;
+    [SerializeField] public Slider profitSlider;
+    [SerializeField] public Text percentPaper;
+    [SerializeField] public Text percentProfit;
+    [SerializeField] public Text percentHappy;
+    private const int RESOURCE_MAX = 100;
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
+    private int counter = 0;
+    public void Update()
+    {
 
+        if (counter > 400)
+        {
+            counter = 0;
+            modifyPaperSupply(1);
+            modifyMoney(1);
+            modifyHappiness(1);
+            Debug.Log("Modifying paper");
+
+        }
+
+    }
     public void modifyPaperSupply(int amount)
     {
 
@@ -43,8 +63,9 @@ public class ResourceLogic : MonoBehaviour
             paperSupply = 100;
             Debug.Log("Maximum Paper Supply Reached");
         }
-
-
+        paperSlider.value = paperSupply / RESOURCE_MAX;
+        percentPaper.text = paperSlider.value.ToString() + " %";
+        Update();
     }
 
 
@@ -71,7 +92,9 @@ public class ResourceLogic : MonoBehaviour
             Debug.Log("Maximum Citizen Happiness Reached");
         }
 
-
+        profitSlider.value =  money/ RESOURCE_MAX;
+        percentProfit.text = profitSlider.value.ToString() + " %";
+        Update();
     }
 
 
@@ -101,9 +124,12 @@ public class ResourceLogic : MonoBehaviour
             Debug.Log("Maximum Money Reached");
         }
 
+        happySlider.value = citizenHappiness / RESOURCE_MAX;
+        percentHappy.text = happySlider.value.ToString() + " %";
 
+        Update();
     }
-
+ 
 
     public int getMoney()
     {
