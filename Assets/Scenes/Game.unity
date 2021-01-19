@@ -497,6 +497,9 @@ MonoBehaviour:
   paperSlider: {fileID: 815174990}
   happySlider: {fileID: 525237008}
   profitSlider: {fileID: 1194112955}
+  percentPaper: {fileID: 238174505}
+  percentProfit: {fileID: 1922971233}
+  percentHappy: {fileID: 651096094}
 --- !u!4 &185391572
 Transform:
   m_ObjectHideFlags: 0
@@ -646,6 +649,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6522743280385720843, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
+--- !u!114 &238174505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6522743278903107970, guid: 55bc63a4e6d9df047a2c4e13414651d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 238174504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +991,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2311039446019429900, guid: d16a88e4956da0b439ef6c7a7f2d8daa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d16a88e4956da0b439ef6c7a7f2d8daa, type: 3}
+--- !u!114 &651096094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2311039446650576723, guid: d16a88e4956da0b439ef6c7a7f2d8daa,
+    type: 3}
+  m_PrefabInstance: {fileID: 651096093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &748507400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1490,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1263250655}
     m_Modifications:
+    - target: {fileID: 5298630782580391509, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
+        type: 3}
+      propertyPath: m_Name
+      value: percentProfit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298630783142175478, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
+        type: 3}
+      propertyPath: m_Name
+      value: profit
+      objectReference: {fileID: 0}
     - target: {fileID: 5298630783274383546, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
         type: 3}
       propertyPath: m_Name
@@ -1591,6 +1628,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5298630783274383548, guid: 8bb5ddd9f4e756e4d801ea28d00ada56, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8bb5ddd9f4e756e4d801ea28d00ada56, type: 3}
+--- !u!114 &1922971233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5298630782580391511, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
+    type: 3}
+  m_PrefabInstance: {fileID: 1922971232}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2057117318
 GameObject:
   m_ObjectHideFlags: 0
