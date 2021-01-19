@@ -27,12 +27,12 @@ public class ResourceLogic : MonoBehaviour
     public void Update()
     {
 
-        if (counter > 400)
+        if (counter >= 350)
         {
             counter = 0;
-            modifyPaperSupply(1);
-            modifyMoney(1);
-            modifyHappiness(1);
+            modifyPaperSupply(100);
+            modifyMoney(100);
+            modifyHappiness(100);
             Debug.Log("Modifying paper");
 
         }
