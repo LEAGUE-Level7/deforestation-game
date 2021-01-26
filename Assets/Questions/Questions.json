@@ -20,13 +20,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 1000,
-              "MaxEffect": 10000
+              "MinEffect": 10,
+              "MaxEffect": 100
             },
             {
               "Type": "Forest",
-              "MinEffect": -5000,
-              "MaxEffect": -500
+              "MinEffect": -50,
+              "MaxEffect": -5
             },
             {
               "Type": "PublicOpinion",
@@ -40,18 +40,18 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 50000,
-              "MaxEffect": 100000
+              "MinEffect": 50,
+              "MaxEffect": 100
             },
             {
               "Type": "Forest",
-              "MinEffect": -5000,
-              "MaxEffect": -500
+              "MinEffect": -50,
+              "MaxEffect": -5
             },
             {
               "Type": "PublicOpinion",
-              "MinEffect": -50,
-              "MaxEffect": -10
+              "MinEffect": -5,
+              "MaxEffect": -1
             }
           ]
         }
@@ -67,13 +67,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 10000,
-              "MaxEffect": 25000
+              "MinEffect": 100,
+              "MaxEffect": 250
             },
             {
               "Type": "PublicOpinion",
-              "MinEffect": 10,
-              "MaxEffect": 50
+              "MinEffect": 1,
+              "MaxEffect": 5
             }
           ]
         },
@@ -98,8 +98,8 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 1000,
-              "MaxEffect": 10000
+              "MinEffect": 10,
+              "MaxEffect": 100
             },
             {
               "Type": "Forest",
@@ -113,13 +113,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 10000,
-              "MaxEffect": 100000
+              "MinEffect": 100,
+              "MaxEffect": 1000
             },
             {
               "Type": "Forest",
-              "MinEffect": -500,
-              "MaxEffect": -100
+              "MinEffect": -5,
+              "MaxEffect": -1
             }
           ]
         }
@@ -135,13 +135,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -10000,
-              "MaxEffect": -1000
+              "MinEffect": -100,
+              "MaxEffect": -10
             },
             {
               "Type": "Forest",
-              "MinEffect": -50000,
-              "MaxEffect": -1000
+              "MinEffect": -500,
+              "MaxEffect": -10
             }
           ]
         },
@@ -150,13 +150,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -40000,
-              "MaxEffect": -4000
+              "MinEffect": -400,
+              "MaxEffect": -40
             },
             {
               "Type": "Forest",
-              "MinEffect": -5000,
-              "MaxEffect": -20
+              "MinEffect": -50,
+              "MaxEffect": -2
             }
           ]
         },
@@ -165,8 +165,8 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -90000,
-              "MaxEffect": -9000
+              "MinEffect": -90,
+              "MaxEffect": -9
             },
             {
               "Type": "Forest",
@@ -217,8 +217,8 @@
     {
       "Question": "Request bank loan?",
       "ConditionType": "Money",
-      "ConditionMin": -10000,
-      "ConditionMax": 1000,
+      "ConditionMin": -10,
+      "ConditionMax": 100,
 
       "Answers": [
         {
@@ -226,8 +226,8 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 1000,
-              "MaxEffect": 5000
+              "MinEffect": 100,
+              "MaxEffect": 500
             }
           ]
         },

@@ -210,8 +210,10 @@ GameObject:
   - component: {fileID: 248741110}
   - component: {fileID: 248741112}
   - component: {fileID: 248741111}
+  - component: {fileID: 248741114}
+  - component: {fileID: 248741113}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,6 +279,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248741109}
   m_CullTransparentMesh: 0
+--- !u!114 &248741113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248741109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d025713c523f6ae49bccf661a74e58cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &248741114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248741109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4059ceb11ea3d794f8a194e9cbc9d879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 248741111}
+  score: {fileID: 693649140}
+  rLogic: {fileID: 248741113}
 --- !u!1 &693649138
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +318,7 @@ GameObject:
   - component: {fileID: 693649141}
   - component: {fileID: 693649140}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
