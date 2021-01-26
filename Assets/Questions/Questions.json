@@ -25,12 +25,12 @@
             },
             {
               "Type": "Forest",
-              "MinEffect": -50,
+              "MinEffect": -10,
               "MaxEffect": -5
             },
             {
               "Type": "PublicOpinion",
-              "MinEffect": -3,
+              "MinEffect": -30,
               "MaxEffect": -1
             }
           ]
@@ -45,7 +45,7 @@
             },
             {
               "Type": "Forest",
-              "MinEffect": -50,
+              "MinEffect": -20,
               "MaxEffect": -5
             },
             {
@@ -103,8 +103,8 @@
             },
             {
               "Type": "Forest",
-              "MinEffect": -50,
-              "MaxEffect": -10
+              "MinEffect": -5,
+              "MaxEffect": -1
             }
           ]
         },
@@ -135,12 +135,12 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -100,
-              "MaxEffect": -10
+              "MinEffect": -20,
+              "MaxEffect": -4
             },
             {
               "Type": "Forest",
-              "MinEffect": -500,
+              "MinEffect": -30,
               "MaxEffect": -10
             }
           ]
@@ -150,12 +150,12 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -400,
-              "MaxEffect": -40
+              "MinEffect": -20,
+              "MaxEffect": -4
             },
             {
               "Type": "Forest",
-              "MinEffect": -50,
+              "MinEffect": -5,
               "MaxEffect": -2
             }
           ]
@@ -165,13 +165,28 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -90,
+              "MinEffect": -15,
               "MaxEffect": -9
             },
             {
               "Type": "Forest",
               "MinEffect": -8,
               "MaxEffect": -2
+            }
+          ]
+        },
+        {
+          "AnswerText": "Please Make me loose",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -150000,
+              "MaxEffect": -9000
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": -8000,
+              "MaxEffect": -2000
             }
           ]
         }
@@ -187,8 +202,8 @@
           "Effects": [
             {
               "Type": "PublicOpinion",
-              "MinEffect": -20,
-              "MaxEffect": -10
+              "MinEffect": -2,
+              "MaxEffect": -1
             }
           ]
         },
@@ -207,7 +222,7 @@
           "Effects": [
             {
               "Type": "PublicOpinion",
-              "MinEffect": -10,
+              "MinEffect": -8,
               "MaxEffect": -5
             }
           ]
