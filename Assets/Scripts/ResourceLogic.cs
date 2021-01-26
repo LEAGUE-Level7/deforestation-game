@@ -7,9 +7,9 @@ using UnityEngine;
 public class ResourceLogic : MonoBehaviour
 {
     //values are out of 100
-    private int paperSupply = 50;
-    private int citizenHappiness = 50;
-    private int money = 50;
+    static private int paperSupply = 50;
+    static private int citizenHappiness = 50;
+    static private int money = 50;
     //value is out of 5 with a HIGHER VALUE = SHORTER GAME!!
     private int lengthOfGame = 2;
     private bool hasSetLength = false;
