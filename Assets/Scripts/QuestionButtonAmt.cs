@@ -69,7 +69,7 @@ public class QuestionButtonAmt : MonoBehaviour
 
         //pass in the original text object and then the question as a string
         //setQuestion(questionText, question, fileName);
-        Debug.Log(fileName);
+       // Debug.Log(fileName);
         using (StreamReader r = new StreamReader(fileName))
         {
 
