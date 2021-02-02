@@ -23,27 +23,18 @@ public class ResourceLogic : MonoBehaviour
     [SerializeField] public Text percentHappy;
     private const int RESOURCE_MAX = 100;
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
-    private int counter = 0;
-    public void Update()
+    public void Start()
     {
-
-        if (counter >= 350)
-        {
-            counter = 0;
-            modifyPaperSupply(100);
-            modifyMoney(100);
-            modifyHappiness(100);
-            Debug.Log("Modifying paper");
-
-        }
-
+        Debug.Log(paperSupply);
+        Debug.Log(citizenHappiness);
+        Debug.Log(money);
     }
     public void modifyPaperSupply(int amount)
     {
 
         int amountChanged = paperSupply + amount * lengthOfGame;
 
-        if (amount<0 &&  amountChanged >= 0)
+       /* if (amount<0 &&  amountChanged >= 0)
         {
 
             paperSupply += amount * lengthOfGame;
@@ -62,10 +53,9 @@ public class ResourceLogic : MonoBehaviour
         {
             paperSupply = 100;
             Debug.Log("Maximum Paper Supply Reached");
-        }
-        paperSlider.value = paperSupply / RESOURCE_MAX;
-        percentPaper.text = paperSlider.value.ToString() + " %";
-        Update();
+        }*/
+        paperSlider.value = ((float)paperSupply / RESOURCE_MAX);
+        percentPaper.text = paperSlider.value*100 + " %";
     }
 
 
@@ -75,26 +65,26 @@ public class ResourceLogic : MonoBehaviour
 
         int amountChanged = citizenHappiness + amount * lengthOfGame;
 
-        if (amount<0 && amountChanged >= 0) {
+        /* if (amount<0 && amountChanged >= 0) {
 
-            citizenHappiness += amount * lengthOfGame;
-            
-        }else if (amount<0 && amountChanged < 0)
-        {
-            citizenHappiness = 0;
-            Debug.Log("Minimum Citizen Happiness Reached");
-        }else if (amount>0 && amountChanged <= 100)
-        {
-            citizenHappiness += amount * lengthOfGame;
-        }else if (amount>0 && amountChanged > 100)
-        {
-            citizenHappiness = 100;
-            Debug.Log("Maximum Citizen Happiness Reached");
-        }
+             citizenHappiness += amount * lengthOfGame;
 
-        profitSlider.value =  money/ RESOURCE_MAX;
-        percentProfit.text = profitSlider.value.ToString() + " %";
-        Update();
+         }else if (amount<0 && amountChanged < 0)
+         {
+             citizenHappiness = 0;
+             Debug.Log("Minimum Citizen Happiness Reached");
+         }else if (amount>0 && amountChanged <= 100)
+         {
+             citizenHappiness += amount * lengthOfGame;
+         }else if (amount>0 && amountChanged > 100)
+         {
+             citizenHappiness = 100;
+             Debug.Log("Maximum Citizen Happiness Reached");
+         }*/
+
+        profitSlider.value = ((float)money / RESOURCE_MAX) ;
+        percentProfit.text = profitSlider.value*100 + " %";
+        Debug.Log(profitSlider.value);
     }
 
 
@@ -103,31 +93,30 @@ public class ResourceLogic : MonoBehaviour
 
         int amountChanged = money + amount * lengthOfGame;
 
-        if (amount<0 && amountChanged >= 0)
-        {
+        /*  if (amount<0 && amountChanged >= 0)
+          {
 
-            money += amount * lengthOfGame;
+              money += amount * lengthOfGame;
 
-        }
-        else if (amount<0 && amountChanged < 0)
-        {
-            money = 0;
-            Debug.Log("Minimum Money Reached");
-        }
-        else if (amount>0 && amountChanged <= 100)
-        {
-            money += amount * lengthOfGame;
-        }
-        else if (amount>0 && amountChanged > 100)
-        {
-            money = 100;
-            Debug.Log("Maximum Money Reached");
-        }
+          }
+          else if (amount<0 && amountChanged < 0)
+          {
+              money = 0;
+              Debug.Log("Minimum Money Reached");
+          }
+          else if (amount>0 && amountChanged <= 100)
+          {
+              money += amount * lengthOfGame;
+          }
+          else if (amount>0 && amountChanged > 100)
+          {
+              money = 100;
+              Debug.Log("Maximum Money Reached");
+          }*/
 
-        happySlider.value = citizenHappiness / RESOURCE_MAX;
-        percentHappy.text = happySlider.value.ToString() + " %";
+        happySlider.value = ((float)citizenHappiness / RESOURCE_MAX);
+        percentHappy.text = happySlider.value*100 + " %";
 
-        Update();
     }
  
 

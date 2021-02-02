@@ -498,7 +498,7 @@ MonoBehaviour:
   happySlider: {fileID: 525237008}
   profitSlider: {fileID: 1194112955}
   percentPaper: {fileID: 238174505}
-  percentProfit: {fileID: 1922971233}
+  percentProfit: {fileID: 1048757441}
   percentHappy: {fileID: 651096094}
 --- !u!4 &185391572
 Transform:
@@ -646,8 +646,25 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522743280385720842, guid: 55bc63a4e6d9df047a2c4e13414651d4,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522743280385720842, guid: 55bc63a4e6d9df047a2c4e13414651d4,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522743280385720842, guid: 55bc63a4e6d9df047a2c4e13414651d4,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6522743280385720843, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
+    - {fileID: 6522743280527499503, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
+    - {fileID: 6522743278903107996, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
 --- !u!114 &238174505 stripped
 MonoBehaviour:
@@ -866,7 +883,17 @@ PrefabInstance:
     - target: {fileID: 2311039446019429901, guid: d16a88e4956da0b439ef6c7a7f2d8daa,
         type: 3}
       propertyPath: m_Value
-      value: 100
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311039446019429901, guid: d16a88e4956da0b439ef6c7a7f2d8daa,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311039446019429901, guid: d16a88e4956da0b439ef6c7a7f2d8daa,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2311039446019429902, guid: d16a88e4956da0b439ef6c7a7f2d8daa,
         type: 3}
@@ -1218,6 +1245,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944745212}
   m_CullTransparentMesh: 0
+--- !u!114 &1048757441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5298630782580391511, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
+    type: 3}
+  m_PrefabInstance: {fileID: 1922971232}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1194112953 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5298630783274383549, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
@@ -1615,6 +1654,16 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5298630783274383551, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298630783274383551, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5298630783398649801, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1628,18 +1677,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5298630783274383548, guid: 8bb5ddd9f4e756e4d801ea28d00ada56, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8bb5ddd9f4e756e4d801ea28d00ada56, type: 3}
---- !u!114 &1922971233 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5298630782580391511, guid: 8bb5ddd9f4e756e4d801ea28d00ada56,
-    type: 3}
-  m_PrefabInstance: {fileID: 1922971232}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2057117318
 GameObject:
   m_ObjectHideFlags: 0
