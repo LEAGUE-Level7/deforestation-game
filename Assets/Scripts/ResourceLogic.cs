@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResourceLogic : MonoBehaviour
 {
@@ -14,13 +15,38 @@ public class ResourceLogic : MonoBehaviour
     private int lengthOfGame = 2;
     private bool hasSetLength = false;
 
+    [SerializeField]
+    private Image backgroundImage;
 
+    private Sprite env1;
+    private Sprite env2;
+    private Sprite env3;
+    private Sprite env4;
+    private Sprite env5;
+    private Sprite env6;
+
+    public void Awake()
+    {
+        env1 = Resources.Load<Sprite>("env1");
+        Debug.Log(env1.name);
+        env2 = Resources.Load<Sprite>("env2");
+        Debug.Log(env2.name);
+        env3 = Resources.Load<Sprite>("env3");
+        Debug.Log(env3.name);
+        env4 = Resources.Load<Sprite>("env4");
+        Debug.Log(env4.name);
+        env5 = Resources.Load<Sprite>("env5");
+        Debug.Log(env5.name);
+        env6 = Resources.Load<Sprite>("env6");
+        Debug.Log(env6.name);
+
+    }
 
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
 
     public void modifyPaperSupply(int amount)
     {
-
+        
         int amountChanged = paperSupply + amount * lengthOfGame;
 
         if (amount<0 &&  amountChanged >= 0)
@@ -44,6 +70,7 @@ public class ResourceLogic : MonoBehaviour
             Debug.Log("Maximum Paper Supply Reached");
         }
 
+        backgroundImage.sprite = env1;
 
     }
 
@@ -135,6 +162,11 @@ public class ResourceLogic : MonoBehaviour
         {
             Debug.Log("You have exceed the range of values for gameLength. Length of game should be set from a number 1-5 with 5 being a shortest game and 1 being the longest game.");
         }
+    }
+
+    public void setBackground(int imageShown)
+    {
+
     }
 
 
