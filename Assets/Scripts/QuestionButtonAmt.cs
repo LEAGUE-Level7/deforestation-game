@@ -31,7 +31,7 @@ public class QuestionButtonAmt : MonoBehaviour
 
     }
 
-    public static int questionQuota = 5;
+    public static int questionQuota = 30;
     public static int questionsDone = 0;
     public void reset()
     {
