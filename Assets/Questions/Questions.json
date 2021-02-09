@@ -10,8 +10,8 @@
           "Effects": [
             {
               "Type": "PublicOpinion",
-              "MinEffect": 1,
-              "MaxEffect": 1
+              "MinEffect": 4,
+              "MaxEffect": 6
             }
           ]
         },
@@ -20,17 +20,17 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 10,
-              "MaxEffect": 100
+              "MinEffect": 4,
+              "MaxEffect": 10
             },
             {
               "Type": "Forest",
-              "MinEffect": -10,
+              "MinEffect": -7,
               "MaxEffect": -5
             },
             {
               "Type": "PublicOpinion",
-              "MinEffect": -30,
+              "MinEffect": -6,
               "MaxEffect": -1
             }
           ]
@@ -40,18 +40,18 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 50,
-              "MaxEffect": 100
+              "MinEffect": 15,
+              "MaxEffect": 20
             },
             {
               "Type": "Forest",
               "MinEffect": -20,
-              "MaxEffect": -5
+              "MaxEffect": -15
             },
             {
               "Type": "PublicOpinion",
-              "MinEffect": -5,
-              "MaxEffect": -1
+              "MinEffect": -15,
+              "MaxEffect": -5
             }
           ]
         }
@@ -67,12 +67,12 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 100,
-              "MaxEffect": 250
+              "MinEffect": -20,
+              "MaxEffect": -10
             },
             {
               "Type": "PublicOpinion",
-              "MinEffect": 1,
+              "MinEffect": -4,
               "MaxEffect": 5
             }
           ]
@@ -80,12 +80,18 @@
 
         {
           "AnswerText": "No",
-          "Effects": []
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -2,
+              "MaxEffect": 0
+            }
+          ]
         }
       ]
     },
     {
-        "Question": "  Do you want to sell a share of     your forest, if so how much?",
+      "Question": "  Do you want to sell a share of     your forest, if so how much?",
       "ConditionType": "Any",
 
       "Answers": [
@@ -98,13 +104,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 10,
-              "MaxEffect": 100
+              "MinEffect": 5,
+              "MaxEffect": 15
             },
             {
               "Type": "Forest",
-              "MinEffect": -5,
-              "MaxEffect": -1
+              "MinEffect": -10,
+              "MaxEffect": -5
             }
           ]
         },
@@ -113,13 +119,13 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 100,
-              "MaxEffect": 1000
+              "MinEffect": 10,
+              "MaxEffect": 20
             },
             {
               "Type": "Forest",
-              "MinEffect": -5,
-              "MaxEffect": -1
+              "MinEffect": -20,
+              "MaxEffect": -15
             }
           ]
         }
@@ -140,7 +146,7 @@
             },
             {
               "Type": "Forest",
-              "MinEffect": -30,
+              "MinEffect": -15,
               "MaxEffect": -10
             }
           ]
@@ -150,7 +156,7 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": -20,
+              "MinEffect": -10,
               "MaxEffect": -4
             },
             {
@@ -170,23 +176,8 @@
             },
             {
               "Type": "Forest",
-              "MinEffect": -8,
-              "MaxEffect": -2
-            }
-          ]
-        },
-        {
-          "AnswerText": "Please Make me loose",
-          "Effects": [
-            {
-              "Type": "Money",
-              "MinEffect": -150000,
-              "MaxEffect": -9000
-            },
-            {
-              "Type": "Forest",
-              "MinEffect": -8000,
-              "MaxEffect": -2000
+              "MinEffect": -1,
+              "MaxEffect": 0
             }
           ]
         }
@@ -202,8 +193,8 @@
           "Effects": [
             {
               "Type": "PublicOpinion",
-              "MinEffect": -2,
-              "MaxEffect": -1
+              "MinEffect": -5,
+              "MaxEffect": -3
             }
           ]
         },
@@ -212,8 +203,8 @@
           "Effects": [
             {
               "Type": "PublicOpinion",
-              "MinEffect": 12,
-              "MaxEffect": 30
+              "MinEffect": 8,
+              "MaxEffect": 16
             }
           ]
         },
@@ -222,8 +213,8 @@
           "Effects": [
             {
               "Type": "PublicOpinion",
-              "MinEffect": -8,
-              "MaxEffect": -5
+              "MinEffect": -3,
+              "MaxEffect": -1
             }
           ]
         }
@@ -241,8 +232,8 @@
           "Effects": [
             {
               "Type": "Money",
-              "MinEffect": 100,
-              "MaxEffect": 500
+              "MinEffect": 0,
+              "MaxEffect": 30
             }
           ]
         },
