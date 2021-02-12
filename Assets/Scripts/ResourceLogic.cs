@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class ResourceLogic : MonoBehaviour
 {
     //values are out of 100
-    static private int paperSupply = 50;
-    static private int citizenHappiness = 50;
-    static private int money = 50;
+    static private int paperSupply ;
+    static private int citizenHappiness;
+    static private int money;
     //value is out of 5 with a HIGHER VALUE = SHORTER GAME!!
     private int lengthOfGame = 2;
     private bool hasSetLength = false;
@@ -25,7 +25,9 @@ public class ResourceLogic : MonoBehaviour
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
     public void Start()
     {
-       
+        citizenHappiness = 50;
+        money = 50;
+        paperSupply = 50;
         modifyHappiness(0);
         modifyMoney(0);
         modifyPaperSupply(0);
