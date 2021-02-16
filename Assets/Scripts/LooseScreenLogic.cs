@@ -21,7 +21,7 @@ public class LooseScreenLogic : MonoBehaviour
             reason = "Lack of stock was";
         }
         text.text = reason + " the death of your company";
-
+        Debug.Log(rLogic.getMoney() + " " + rLogic.getCitizenHappiness() + " " + rLogic.getPaperSupply());
         
     }
 
