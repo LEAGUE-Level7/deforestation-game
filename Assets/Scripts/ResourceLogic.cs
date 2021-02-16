@@ -7,12 +7,16 @@ using UnityEngine.UI;
 
 public class ResourceLogic : MonoBehaviour
 {
+
+    public Button backgroundButton;
+
     //values are out of 100
     static private int paperSupply = 50;
     static private int citizenHappiness = 50;
     static private int money = 50;
     //value is out of 5 with a HIGHER VALUE = SHORTER GAME!!
     private int lengthOfGame = 2;
+    private int backgroundTracker = 0;
     private bool hasSetLength = false;
 
     [SerializeField]
@@ -24,6 +28,20 @@ public class ResourceLogic : MonoBehaviour
     private Sprite env4;
     private Sprite env5;
     private Sprite env6;
+
+    private Sprite soc1;
+    private Sprite soc2;
+    private Sprite soc3;
+    private Sprite soc4;
+    private Sprite soc5;
+    private Sprite soc6;
+
+    private Sprite fac1;
+    private Sprite fac2;
+    private Sprite fac3;
+    private Sprite fac4;
+    private Sprite fac5;
+    private Sprite fac6;
 
     public void Awake()
     {
@@ -39,7 +57,35 @@ public class ResourceLogic : MonoBehaviour
         Debug.Log(env5.name);
         env6 = Resources.Load<Sprite>("env6");
         Debug.Log(env6.name);
+        
+        soc1 = Resources.Load<Sprite>("social1");
+        Debug.Log(soc1.name);
+        soc2 = Resources.Load<Sprite>("social2");
+        Debug.Log(soc2.name);
+        soc3 = Resources.Load<Sprite>("social3");
+        Debug.Log(soc3.name);
+        soc4 = Resources.Load<Sprite>("social4");
+        Debug.Log(soc4.name);
+        soc5 = Resources.Load<Sprite>("social5");
+        Debug.Log(soc5.name);
+        soc6 = Resources.Load<Sprite>("social6");
+        Debug.Log(soc6.name);
+
+        fac1 = Resources.Load<Sprite>("factory1");
+        Debug.Log(fac1.name);
+        fac2 = Resources.Load<Sprite>("factory2");
+        Debug.Log(fac2.name);
+        fac3 = Resources.Load<Sprite>("factory3");
+        Debug.Log(fac3.name);
+        fac4 = Resources.Load<Sprite>("factory4");
+        Debug.Log(fac4.name);
+        fac5 = Resources.Load<Sprite>("factory5");
+        Debug.Log(fac5.name);
+        fac6 = Resources.Load<Sprite>("factory6");
+        Debug.Log(fac6.name);
+
         backgroundImage.sprite = env3;
+        backgroundTracker = 0;
     }
 
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
@@ -69,33 +115,7 @@ public class ResourceLogic : MonoBehaviour
             paperSupply = 100;
             Debug.Log("Maximum Paper Supply Reached");
         }
-
-        if (paperSupply <= 16 && paperSupply >= 0)
-        {
-            backgroundImage.sprite = env6;
-        }
-        else if (paperSupply <= 33 && paperSupply >= 17)
-        {
-            backgroundImage.sprite = env5;
-        }
-        else if (paperSupply <= 50 && paperSupply >= 34)
-        {
-            backgroundImage.sprite = env4;
-        }
-        else if (paperSupply <= 66 && paperSupply >= 51)
-        {
-            backgroundImage.sprite = env3;
-        }
-        else if (paperSupply <= 83 && paperSupply >= 67)
-        {
-            backgroundImage.sprite = env2;
-        }
-        else if (paperSupply <= 100 && paperSupply >= 84)
-        {
-            backgroundImage.sprite = env1;
-        }
-
-
+        updateBackground();
     }
 
 
@@ -121,7 +141,7 @@ public class ResourceLogic : MonoBehaviour
             citizenHappiness = 100;
             Debug.Log("Maximum Citizen Happiness Reached");
         }
-
+        updateBackground();
 
     }
 
@@ -151,7 +171,7 @@ public class ResourceLogic : MonoBehaviour
             money = 100;
             Debug.Log("Maximum Money Reached");
         }
-
+        updateBackground();
 
     }
 
@@ -188,13 +208,101 @@ public class ResourceLogic : MonoBehaviour
         }
     }
 
-    public void setBackground(int imageShown)
+    public void buttonClick()
     {
-
+        Debug.Log("button_clicked");
+        if (backgroundTracker < 2)
+        {
+            backgroundTracker += 1;
+        }
+        else backgroundTracker = 0;
+        updateBackground();
     }
 
+    public void updateBackground()
+    {
+        if (backgroundTracker == 0) {
+            if (paperSupply <= 16)
+            {
+                backgroundImage.sprite = env6;
+            }
+            else if (paperSupply <= 33)
+            {
+                backgroundImage.sprite = env5;
+            }
+            else if (paperSupply <= 49)
+            {
+                backgroundImage.sprite = env4;
+            }
+            else if (paperSupply <= 67)
+            {
+                backgroundImage.sprite = env3;
+            }
+            else if (paperSupply <= 84)
+            {
+                backgroundImage.sprite = env2;
+            }
+            else if (paperSupply <= 100)
+            {
+                backgroundImage.sprite = env1;
+            }
+        }
+        if (backgroundTracker == 1)
+        {
+            if (money <= 16)
+            {
+                backgroundImage.sprite = fac6;
+            }
+            else if (money <= 33)
+            {
+                backgroundImage.sprite = fac5;
+            }
+            else if (money <= 49)
+            {
+                backgroundImage.sprite = fac4;
+            }
+            else if (money <= 67)
+            {
+                backgroundImage.sprite = fac3;
+            }
+            else if (money <= 84)
+            {
+                backgroundImage.sprite = fac2;
+            }
+            else if (money <= 100)
+            {
+                backgroundImage.sprite = fac1;
+            }
+        }
+        if (backgroundTracker == 2)
+        {
+            if (citizenHappiness <= 16)
+            {
+                backgroundImage.sprite = soc6;
+            }
+            else if (citizenHappiness <= 33)
+            {
+                backgroundImage.sprite = soc5;
+            }
+            else if (citizenHappiness <= 49)
+            {
+                backgroundImage.sprite = soc4;
+            }
+            else if (citizenHappiness <= 67)
+            {
+                backgroundImage.sprite = soc3;
+            }
+            else if (citizenHappiness <= 84)
+            {
+                backgroundImage.sprite = soc2;
+            }
+            else if (citizenHappiness <= 100)
+            {
+                backgroundImage.sprite = soc1;
+            }
+        }
 
-
+    }
 
 
 }
