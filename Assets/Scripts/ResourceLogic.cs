@@ -39,38 +39,62 @@ public class ResourceLogic : MonoBehaviour
         Debug.Log(env5.name);
         env6 = Resources.Load<Sprite>("env6");
         Debug.Log(env6.name);
-
+        backgroundImage.sprite = env3;
     }
 
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
 
     public void modifyPaperSupply(int amount)
     {
-        
+
         int amountChanged = paperSupply + amount * lengthOfGame;
 
-        if (amount<0 &&  amountChanged >= 0)
+        if (amount < 0 && amountChanged >= 0)
         {
 
             paperSupply += amount * lengthOfGame;
 
         }
-        else if (amount<0 && amountChanged < 0)
+        else if (amount < 0 && amountChanged < 0)
         {
             paperSupply = 0;
             Debug.Log("Minimum Paper Supply Reached");
         }
-        else if (amount>0 && amountChanged <= 100)
+        else if (amount > 0 && amountChanged <= 100)
         {
             paperSupply += amount * lengthOfGame;
         }
-        else if (amount>0 && amountChanged > 100)
+        else if (amount > 0 && amountChanged > 100)
         {
             paperSupply = 100;
             Debug.Log("Maximum Paper Supply Reached");
         }
 
-        backgroundImage.sprite = env1;
+        if (paperSupply <= 16 && paperSupply >= 0)
+        {
+            backgroundImage.sprite = env6;
+        }
+        else if (paperSupply <= 33 && paperSupply >= 17)
+        {
+            backgroundImage.sprite = env5;
+        }
+        else if (paperSupply <= 50 && paperSupply >= 34)
+        {
+            backgroundImage.sprite = env4;
+        }
+        else if (paperSupply <= 66 && paperSupply >= 51)
+        {
+            backgroundImage.sprite = env3;
+        }
+        else if (paperSupply <= 83 && paperSupply >= 67)
+        {
+            backgroundImage.sprite = env2;
+        }
+        else if (paperSupply <= 100 && paperSupply >= 84)
+        {
+            backgroundImage.sprite = env1;
+        }
+
 
     }
 
