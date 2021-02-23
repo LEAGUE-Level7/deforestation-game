@@ -50,7 +50,12 @@ public class ResourceLogic : MonoBehaviour
     private Sprite fac4;
     private Sprite fac5;
     private Sprite fac6;
-
+    public void Resetvalues()
+    {
+        paperSupply = 50;
+        citizenHappiness = 50;
+        money = 50;
+    }
     public void Awake()
     {
         env1 = Resources.Load<Sprite>("env1");

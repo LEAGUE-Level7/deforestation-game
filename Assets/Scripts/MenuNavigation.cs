@@ -7,9 +7,13 @@ using UnityEngine.SceneManagement;
 public class MenuNavigation : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] ResourceLogic rLogic;
+
     public void StartGame()
     {
+        rLogic = new ResourceLogic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        rLogic.Resetvalues();
         Debug.Log("Game Started" + SceneManager.GetActiveScene().buildIndex);
     }
 
