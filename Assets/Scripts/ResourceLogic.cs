@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class ResourceLogic : MonoBehaviour
 {
     //values are out of 100
-    static private int paperSupply ;
-    static private int citizenHappiness;
-    static private int money;
+    static private int paperSupply=50 ;
+    static private int citizenHappiness=50;
+    static private int money=50;
     //value is out of 5 with a HIGHER VALUE = SHORTER GAME!!
     private int lengthOfGame = 2;
     private bool hasSetLength = false;
@@ -25,9 +25,7 @@ public class ResourceLogic : MonoBehaviour
     //MODIFY VALUES SHOULD BE -3  ->  3 TO MAKE GAME LENGTH APPROPRIATE
     public void Start()
     {
-        citizenHappiness = 50;
-        money = 50;
-        paperSupply = 50;
+       
         modifyHappiness(0);
         modifyMoney(0);
         modifyPaperSupply(0);
@@ -43,15 +41,16 @@ public class ResourceLogic : MonoBehaviour
 
 
 
-    public void modifyHappiness(int amount) 
+    public void modifyHappiness(int amount)
     {
 
         int amountChanged = citizenHappiness + amount * lengthOfGame;
         citizenHappiness = amountChanged;
-        happySlider.value = ((float)citizenHappiness / RESOURCE_MAX) ;
-        percentHappy.text = happySlider.value*100 + " %";
-        Debug.Log(profitSlider.value);
-    }
+        
+            happySlider.value = ((float)citizenHappiness / RESOURCE_MAX);
+            percentHappy.text = happySlider.value * 100 + " %";
+            Debug.Log(profitSlider.value);
+        }
 
 
     public void modifyMoney(int amount)
@@ -64,7 +63,12 @@ public class ResourceLogic : MonoBehaviour
 
     }
  
-
+   public void resetValues()
+    {
+        paperSupply = 50;
+        citizenHappiness = 50;
+        money = 50;
+    }
     public int getMoney()
     {
         return money;
