@@ -662,6 +662,11 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6522743280527499501, guid: 55bc63a4e6d9df047a2c4e13414651d4,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Trees Left:'
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6522743280385720843, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
     - {fileID: 6522743280527499503, guid: 55bc63a4e6d9df047a2c4e13414651d4, type: 3}
@@ -1161,10 +1166,10 @@ RectTransform:
   m_Father: {fileID: 1263250655}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -331, y: -213}
-  m_SizeDelta: {x: 202.11719, y: 59.889633}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 131, y: 47}
+  m_SizeDelta: {x: 202.11719, y: 59.88965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848643916
 MonoBehaviour:
@@ -1233,7 +1238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5294118, g: 0.31764707, b: 0.2784314, a: 1}
+  m_Color: {r: 0.427451, g: 0.22352943, b: 0.18823531, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1743,7 +1748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1751,10 +1756,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
