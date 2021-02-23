@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class ResourceLogic : MonoBehaviour
 {
 
-    public Button backgroundButton;
 
     //values are out of 100
     static private int paperSupply = 50;
