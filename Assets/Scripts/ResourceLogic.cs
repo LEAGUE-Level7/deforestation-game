@@ -222,7 +222,7 @@ public class ResourceLogic : MonoBehaviour
             {
                 backgroundImage.sprite = env2;
             }
-            else if (paperSupply <= 100)
+            else
             {
                 backgroundImage.sprite = env1;
             }
@@ -231,27 +231,27 @@ public class ResourceLogic : MonoBehaviour
         {
             if (money <= 16)
             {
-                backgroundImage.sprite = fac6;
+                backgroundImage.sprite = fac1;
             }
             else if (money <= 33)
             {
-                backgroundImage.sprite = fac5;
+                backgroundImage.sprite = fac2;
             }
             else if (money <= 49)
             {
-                backgroundImage.sprite = fac4;
+                backgroundImage.sprite = fac3;
             }
             else if (money <= 67)
             {
-                backgroundImage.sprite = fac3;
+                backgroundImage.sprite = fac4;
             }
             else if (money <= 84)
             {
-                backgroundImage.sprite = fac2;
+                backgroundImage.sprite = fac5;
             }
-            else if (money <= 100)
+            else
             {
-                backgroundImage.sprite = fac1;
+                backgroundImage.sprite = fac6;
             }
         }
         if (backgroundTracker == 2)
@@ -276,7 +276,7 @@ public class ResourceLogic : MonoBehaviour
             {
                 backgroundImage.sprite = soc2;
             }
-            else if (citizenHappiness <= 100)
+            else
             {
                 backgroundImage.sprite = soc1;
             }
