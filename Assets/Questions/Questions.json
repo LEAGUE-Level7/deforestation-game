@@ -242,6 +242,120 @@
           "Effects": []
         }
       ]
+    },
+    {
+      "Question": "Plant Trees?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "None",
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -10,
+              "MaxEffect": -5
+            }
+          ]
+        },
+        {
+          "AnswerText": "Some",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -10,
+              "MaxEffect": -4
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": 7,
+              "MaxEffect": 10
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": 1,
+              "MaxEffect": 6
+            }
+          ]
+        },
+        {
+          "AnswerText": "Alot",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -15,
+              "MaxEffect": -10
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": 10,
+              "MaxEffect": 25
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": 5,
+              "MaxEffect": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Question": "Import Foreign Trees?",
+      "ConditionType": "Any",
+
+      "Answers": [
+        {
+          "AnswerText": "None",
+          "Effects": [
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": 1,
+              "MaxEffect": 6
+            }
+          ]
+        },
+        {
+          "AnswerText": "Some",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -15,
+              "MaxEffect": -4
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": 5,
+              "MaxEffect": 7
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -8,
+              "MaxEffect": 1
+            }
+          ]
+        },
+        {
+          "AnswerText": "Alot",
+          "Effects": [
+            {
+              "Type": "Money",
+              "MinEffect": -27,
+              "MaxEffect": -10
+            },
+            {
+              "Type": "Forest",
+              "MinEffect": 10,
+              "MaxEffect": 25
+            },
+            {
+              "Type": "PublicOpinion",
+              "MinEffect": -15,
+              "MaxEffect": 2
+            }
+          ]
+        }
+      ]
     }
   ]
 }
